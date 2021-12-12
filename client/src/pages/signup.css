@@ -18,7 +18,7 @@ font-family: 'Old Standard TT', serif;
 font-family: 'Roboto Slab', serif;
 font-size: 5.5vh;
 font-weight: 9000;
-color: #b5afcd;
+color: #7e74a4;
 }
 
 a{
@@ -42,13 +42,13 @@ a{
 }
 
 .button{
-    width: 30%;
-    margin: 5px 40px;
-    background-color: #dcd6f2;
-    padding: 8px;
+    width: 20%;
+    margin: 5px 35px;
+    padding: 13px;
     font-weight: 600;
-    border: none;
-    color: #7e74a4;
+    border: 2px solid #c7b9ff;
+    color: #7b6dbd;
+    background-color: white;
 }
 
 .sign-up-font{
@@ -56,9 +56,32 @@ a{
 }
 
 .list{
-   align-items:flex-end;
-}
+   /* text-align: center; */
+   /* padding: 80px; */
+   /* margin-right: 10px; */
 
+   left: -7%;
+   position: absolute;
+   border: 10% solid black;
+   background-color: cadetblue;
+   padding: 30%;
+   background-clip: content-box;
+    
+    border-radius: 6px;
+    background-color: #e7e6e7;
+    margin-left: 15px;
+    margin-right: 15px;
+   
+}
+.label{
+    text-align: center;
+    /* position: absolute; */
+    color: #705fb0;
+    margin-top: 1%;
+}
+.choice{
+    margin: 5px;
+}
 .options{
     text-align: left;
     margin-left: 190px;
@@ -69,3 +92,34 @@ a{
     margin-left: 190px;
 }
 
+p{
+    color: #705fb0;
+}
+
+.signup{
+    width: 30%;
+    margin: 5% 10%;
+    background-color: #dcd6f2;
+    padding: 8px;
+    font-weight: 600;
+    border: none;
+    color: #705fb0;
+}
+
+/* input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    padding: 6px;
+    
+    background-clip: content-box;
+    
+    border-radius: 6px;
+    background-color: #e7e6e7;
+    margin-left: 15px;
+    margin-right: 15px;
+} */
