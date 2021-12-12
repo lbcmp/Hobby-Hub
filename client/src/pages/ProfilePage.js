@@ -41,17 +41,17 @@ function ProfilePage(props) {
                             <div className="myInfo"> &nbsp; Basic Information</div>
                             <br />
 
-                            <div className="userInfo"><label>First Name:</label> <input className="changeInput" type="text" value={firstName} onChange={e => onChange(e,"firstName")}></input> </div>
-                            <div className="userInfo"><label>Last Name:</label> <input className="changeInput" type="text" value={lastName} onChange={e => onChange(e,"lastName")}></input> </div>
-                            <div className="userInfo"><label>Username:</label> <input className="changeInput" type="text" value={userName} onChange={e => onChange(e,"userName")}></input> </div>
-                            <div className="userInfo"><label>Email:</label> <input className="changeInput" type="text" value={email} onChange={e => onChange(e,"email")}></input> </div>
-                            <div className="userInfo"><label>Date of Birth:</label> <input className="changeInput" type="text" value="12/24/1986" disabled></input> </div>
+                            <div className="userInfo"><label>First Name:</label> <input className="changeInput rounded" type="text" value={firstName} onChange={e => onChange(e,"firstName")}></input> </div>
+                            <div className="userInfo"><label>Last Name:</label> <input className="changeInput rounded" type="text" value={lastName} onChange={e => onChange(e,"lastName")}></input> </div>
+                            <div className="userInfo"><label>Username:</label> <input className="changeInput rounded" type="text" value={userName} onChange={e => onChange(e,"userName")}></input> </div>
+                            <div className="userInfo"><label>Email:</label> <input className="changeInput rounded" type="text" value={email} onChange={e => onChange(e,"email")}></input> </div>
+                            <div className="userInfo"><label>Date of Birth:</label> <input className="changeInput rounded" type="text" value="12/24/1986" disabled></input> </div>
                             <br />
 
                             <div className="myInfo"> &nbsp; Hobby Related Information</div>
                             <br />
-                            <div className="userInfo"><label>Hobby:</label> <input className="changeInput" type="text" value="Interior Design" disabled></input></div>
-                            <div className="userInfo"><label>Looking For:</label> <input className="changeInput" type="text" value="A project partner" disabled></input> </div>
+                            <div className="userInfo"><label>Hobby:</label> <input className="changeInput rounded" type="text" value="Interior Design" disabled></input></div>
+                            <div className="userInfo"><label>Looking For:</label> <input className="changeInput rounded" type="text" value="A project partner" disabled></input> </div>
 
                             <br/>
                             <br/>

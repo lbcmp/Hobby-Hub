@@ -31,7 +31,7 @@ function MessagePage(props) {
               <input
                 type="text"
                 placeholder="Type Here..."
-                className="form-control mr-3 rounded"
+                className="form-control mr-3 rounded inputbar"
               />
               <button className="input-group-addon">Send</button>
             </div>

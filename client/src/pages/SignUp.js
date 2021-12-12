@@ -88,26 +88,26 @@ class SignUp extends React.Component{
       err = <div className="alert alert-danger" role="alert">Login Failed</div>;
     }
         return(
-            <div className='div-signup'>
+            <div className='div-signup rounded'>
                 {err}
                 <div>
                     <form onSubmit={this.signup}>
-                        <p className="header-font">Hobbies Hubs</p>
-                        <input className='input' type='fname' name='fname' placeholder='First Name' required onChange={this.fieldChanged('fname')}/>
-                        <input className='input' type='lname' name='lname' placeholder='Last Name' required onChange={this.fieldChanged('lname')}/>
-                        <input className='input' type='email' name='email' placeholder='Email' required onChange={this.fieldChanged('email')}/>
-                        <input className='input' type='uemail' name='username' placeholder='Username' required onChange={this.fieldChanged('username')}/>
-                        <input className='input' type='password' name='password' placeholder='Password' required onChange={this.fieldChanged('password')}/>
-                        <p className="hobby-option">Choose a Hobby</p>
+                        <p className="header-font">Hobbies Hub</p>
+                        <input className='input rounded' type='fname' name='fname' placeholder='First Name' required onChange={this.fieldChanged('fname')}/>
+                        <input className='input rounded' type='lname' name='lname' placeholder='Last Name' required onChange={this.fieldChanged('lname')}/>
+                        <input className='input rounded' type='email' name='email' placeholder='Email' required onChange={this.fieldChanged('email')}/>
+                        <input className='input rounded' type='uemail' name='username' placeholder='Username' required onChange={this.fieldChanged('username')}/>
+                        <input className='input rounded' type='password' name='password' placeholder='Password' required onChange={this.fieldChanged('password')}/>
+                        <p className="hobby-option">Choose a Hobby:</p>
                         <div className="hobbies">
-                        <button className='button' onSubmit={this.handleSubmit}>Art</button>
-                        <button className='button' onSubmit={this.handleSubmit}>Interior Design</button>
+                        <button className='button chooseButton' onSubmit={this.handleSubmit}>Art</button>
+                        <button className='button chooseButton' onSubmit={this.handleSubmit}>Interior Design</button>
                         </div>
                         <div className="list">
                         <input className='list' type='checkbox' name='checkbox' value='I have a bike'/>
                         <p>I have a bike</p>
                         </div>
-                        <button className='button' onSubmit={this.handleSubmit}>Sign Up</button>
+                        <button className='button signButton' onSubmit={this.handleSubmit}>Sign Up</button>
                     </form>
                 </div>
             </div>

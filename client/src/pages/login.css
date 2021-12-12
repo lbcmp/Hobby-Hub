@@ -12,11 +12,16 @@
 } 
 
 .HH-font{
-font-family: 'Domine', serif;
+/* font-family: 'Domine', serif;
 font-family: 'Old Standard TT', serif;
-font-family: 'Roboto Slab', serif;
-font-size: 5.5vh;
-font-weight: 9000;
+font-family: 'Roboto Slab', serif; */
+background: -webkit-linear-gradient(#a29acb, #7d72bd);
+-webkit-background-clip: text;
+background-clip: text ;
+-webkit-text-fill-color: transparent;
+font-family: Verdana;
+font-size: 40px;
+font-weight: 9000; 
 color: #7e74a4;
 }
 
@@ -51,5 +56,6 @@ button{
 }
 
 .sign-up-font{
+    color:rgb(100, 72, 131);
     margin-top: 30px;
 }

@@ -3,6 +3,8 @@
 *{
   margin:0;
   padding: 0;
+  font-family: Verdana;
+  font-weight: normal;
 }
 
 .sidenav{
@@ -44,8 +46,8 @@
   width: 100%;
   padding-left: 35px;
   text-align: center;
- 
 }
+
 .UserPic{
   height: 50px;
   width: 50px;
@@ -78,7 +80,6 @@ footer {
 }
 
 .Logo{
-
   font-size: 48px;
   background: -webkit-linear-gradient(#a29acb, #7d72bd);
   -webkit-background-clip: text;
@@ -89,14 +90,31 @@ footer {
 }
 
 .HomePage, .MessagePage, .MatchesPage, .ProfilePage{
-
   text-align: left;
-  width: 80%;
-  margin-left: 201px;
+  width: 100%;
+  margin-left: 200px;
   height: auto;
+  background-color: white;
+  padding-left: 1em;
+  min-height:100vh;
 }
 
 /* Message Page Styles */
+
+.MatchesPage,.HomePage{
+  padding-right: 40px;
+}
+
+.display-grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.plsRender{
+  flex: 1 0 33%; 
+  margin: 1px;
+  height: 250px;
+}
 
 .colMessages {
   border:solid rgba(109,98,173,255) 1.8px;
@@ -130,7 +148,11 @@ footer {
 .input-group {
   height: 50px;
   width:100%;
-  margin-top: 10px;
+}
+
+.inputbar{
+  position: relative;
+  bottom: 8px;
 }
 
 button {
@@ -188,6 +210,19 @@ margin-top: 15px;
   border-radius: 5px;
   padding: 3px,10px;
   color: rgb(100, 72, 131);
+}
+
+.findMatchButton{
+  width: 280px;
+  height:50px;
+  background: none;
+  color:rgb(195, 131, 255);
+  text-decoration: underline;
+}
+
+.findMatchButton:hover{
+  color:rgb(215, 172, 255);
+
 }
 
 /* Home Page Styles */
@@ -281,7 +316,7 @@ margin-top: 15px;
 }
 
 .moveProfile{
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .myInfo{
@@ -308,4 +343,17 @@ label{
   display: inline-block;
   width: 200px;
   margin-bottom: 10px;
+}
+
+/* Login Page  */
+
+.loginButton{
+  position: relative;
+  left: 1px;
+  top: 15px;
+}
+
+.moveLoginDown{
+  position: relative;
+  top: 1px;
 }

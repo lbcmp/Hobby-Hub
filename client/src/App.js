@@ -10,14 +10,13 @@ import ProfilePage from './pages/ProfilePage';
 import MatchesPage from './pages/MatchesPage';
 import MessagePage from './pages/MessagePage';
 import HomePage from './pages/HomePage';
-import AboutUsPage from './pages/AboutUsPage';
 import LoginPage from './pages/LoginPage'
 import SignUp from './pages/SignUp'
 import UserPic from './images/userpic.png';
 import './App.css';
 import { AuthProvider } from './context/AuthContext';
-import PrivateRoute from './components/PrivateRoute'; 
-import AuthButton from './components/AuthButton';
+// import PrivateRoute from './components/PrivateRoute'; 
+// import AuthButton from './components/AuthButton';
 
 
 function Navigation(props) {
@@ -45,13 +44,13 @@ function Navigation(props) {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/posts/new">
+            <NavLink className="nav-link" exact to="/login">
               Sign out
             </NavLink>
           </li>
         </div>
       </ul>
-     <AuthButton/>
+     {/* <AuthButton/> */}
 
       <footer className="text-center">  &copy; Hobbies Hub </footer>
     </nav>
@@ -75,7 +74,7 @@ class App extends React.Component {
               <Route path="/profile" component={ProfilePage}/>
               <Route path="/messages" component={MessagePage}/>
               <Route path="/matches" component={MatchesPage}/>
-              <Route path="/" component={HomePage} />
+              <Route path="/" component={LoginPage} />
             </Switch>
           </div>
         </div>
