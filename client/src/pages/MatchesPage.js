@@ -9,7 +9,7 @@ import monica from '../images/monica.jpg';
 // import gunther from '../images/gunther.jpg';
 // import marcel from '../images/marcel.jpg';
 
-function MatchCard(){
+function MatchCard({userInfo}){
 
     return(
         
@@ -17,7 +17,7 @@ function MatchCard(){
                         <div class="card">
                             <img class="card-img-top" src={monica} alt="Matches" />
                             <div class="card-body">
-                                <h5 class="card-title">Monica</h5>
+                                <h5 class="card-title">{userInfo.firstName + " " + userInfo.lastName}</h5>
                                 <button type="button" class="btn btn-primary">Message</button>
                             </div>
                         </div>
@@ -29,30 +29,37 @@ function MatchCard(){
 class MatchesPage extends React.Component {
 
     state={
-        matches: []
+        matches: [],
+        matchProfiles: []
     }
 
     componentDidMount() {
-        const id = 1;
+        const id = 4;
 
         fetch("/api/user-match/" + id)
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data)
+                this.setState({matches: data})
+            })
 
-        fetch("/api/match-profile/" + id)
-            .then(res => res.json())
-            .then(data => console.log(data))
+        // fetch("/api/match-profile/" + id)
+        //     .then(res => res.json())
+        //     .then(data => console.log(data))
 
     }
 
     findMatch = () =>{
-        const id = 1;
-        const hobby = "Art";
-        const age = 21;
+        const id = 4;
+        const hobby = "interior-design";
+        const age = 40;
 
         fetch("/api/match-profile/"+ id + "/" + hobby + "/" + age)
         .then(res => res.json())
-        .then(data => this.setState({ matches: [1,2,3,4,5,6,7,8,9]}))
+        .then(data => {
+            this.setState({ matches: data.map(m => m.user)})
+            this.setState({ matchProfiles: data})
+        })
     }
 
     render() {
@@ -67,7 +74,7 @@ class MatchesPage extends React.Component {
                 <button className="findMatchButton" onClick={this.findMatch}>Click here for new matches</button>
 
                 <div className="display-grid">
-                    {this.state.matches.map(e =>  <MatchCard></MatchCard>)}
+                    {this.state.matches.map(e =>  <MatchCard userInfo={e}></MatchCard>)}
                 </div>   
 
             </div>

@@ -2,7 +2,7 @@ const e = require('express');
 const express = require('express');
 const router = express.Router();
 const db = require('../models');
-const { MatchProfile, UserMatch } = db;
+const { MatchProfile, User } = db;
 const { Op } = require("sequelize");
 
 router.post('/', (req, res) => {  
@@ -35,7 +35,8 @@ router.get('/:userId/:hobby/:age', (req, res) => {
         [Op.ne] : currUserId
       },
       hobby: currUserHobby
-    }
+    },
+    include: User
   })
   .then(m => {
     const matchProfiles = m.map(e => e.dataValues)
