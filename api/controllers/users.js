@@ -15,6 +15,8 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {  
+
+  console.log('entered')
   //create user
   const username = req.body.username;
   const firstName = req.body.firstName;
@@ -36,6 +38,7 @@ router.post('/', (req, res) => {
   })
   .catch(e => {
     res.status(400).json(e);
+    console.log(e)
   })
 });
 

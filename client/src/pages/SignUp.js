@@ -9,6 +9,9 @@ class SignUp extends React.Component{
         fname:'',
         lname:'',
         username:'',
+        age:'',
+        success:false,
+        error:false
     }
 
     // handleChange = (e) =>{
@@ -28,7 +31,7 @@ class SignUp extends React.Component{
     signup = (e) =>{
         e.preventDefault();
 
-        let {username, fname, lname, email, password} = this.state;
+        let {username, fname, lname, age, email, password} = this.state;
 
         fetch("/api/user/", {
           method: 'POST',
@@ -40,8 +43,7 @@ class SignUp extends React.Component{
             username: username,
             firstName: fname,
             lastName: lname,
-            dob: null,
-            gender: null,
+            age: age,
             email: email,
             password: password
           }),
@@ -59,6 +61,7 @@ class SignUp extends React.Component{
             });
           })
           .catch(err => {
+            console.log(err)
             this.setState({
               error: true,
             });
@@ -97,6 +100,7 @@ class SignUp extends React.Component{
                         <input className='input' type='lname' name='lname' placeholder='Last Name' required onChange={this.fieldChanged('lname')}/>
                         <input className='input' type='email' name='email' placeholder='Email' required onChange={this.fieldChanged('email')}/>
                         <input className='input' type='uemail' name='username' placeholder='Username' required onChange={this.fieldChanged('username')}/>
+                        <input className='input' type='number' min='13' max='100' name='age' placeholder='Age' required onChange={this.fieldChanged('age')}/>
                         <input className='input' type='password' name='password' placeholder='Password' required onChange={this.fieldChanged('password')}/>
                         <p className="hobby-option">Choose a Hobby</p>
                         <div className="hobbies">
