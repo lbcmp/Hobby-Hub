@@ -27,8 +27,8 @@ class HomePage extends React.Component {
         <br />
         <h2 className="Headers">Recent Matches</h2>
 
-        <div className="row">
-
+        <div className="row displayRow">
+         
           <div className="col-md-3">
             <div class="card">
               <img class="card-img-top" src={andy} alt="Matches" />
@@ -59,6 +59,7 @@ class HomePage extends React.Component {
             </div>
           </div>
 
+          
         </div>
 
         <h2 className="Headers">Recent Messages</h2>

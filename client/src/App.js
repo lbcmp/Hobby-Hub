@@ -59,6 +59,7 @@ function Navigation(props) {
 
 
 class App extends React.Component {
+
   render() {
     return (
       <AuthProvider>
@@ -68,7 +69,7 @@ class App extends React.Component {
         <div className="container-fluid text-center">
           <div className="row justify-content-center">
             <Switch>
-              <Route path="/login" component={LoginPage} />
+              <Route path="/login" component={LoginPage}/>
               <Route path="/signup" component={SignUp} />
               <Route path="/home" component={HomePage}/>
               <Route path="/profile" component={ProfilePage}/>

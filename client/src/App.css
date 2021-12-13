@@ -227,6 +227,11 @@ margin-top: 15px;
 
 /* Home Page Styles */
 
+.col-md-3{
+  /* border:solid red 1px; */
+  min-width: 200px;
+}
+
 .card{
   width: 12rem;
   margin: 10px 10px 30px 10px;
@@ -356,4 +361,23 @@ label{
 .moveLoginDown{
   position: relative;
   top: 1px;
+}
+
+/* Matches Page */
+
+.Accept{
+  max-width: 50px;
+  margin-left: 15px;
+  background-color: rgb(103, 187, 103);
+}
+
+.Reject{
+  max-width: 50px;
+  margin-left: 15px;
+  background-color: rgb(235, 94, 94);
+}
+
+
+.displayRow{
+  max-width: 75%;
 }
