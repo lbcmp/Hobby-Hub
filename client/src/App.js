@@ -44,13 +44,13 @@ function Navigation(props) {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" exact to="/login">
+            <NavLink className="nav-link" exact to="/login" onClick={props.logout}>
               Sign out
             </NavLink>
           </li>
         </div>
       </ul>
-     {/* <AuthButton/> */}
+      {/* <AuthButton/> */}
 
       <footer className="text-center">  &copy; Hobbies Hub </footer>
     </nav>
@@ -60,26 +60,43 @@ function Navigation(props) {
 
 class App extends React.Component {
 
+  state = {
+    loggedIn: false
+  }
+
+  login=() => {
+    this.setState({ loggedIn: true })
+  }
+
+  logout=() => {
+    this.setState({ loggedIn: false })
+  }
+
+
   render() {
+
     return (
       <AuthProvider>
 
-      <Router>
-        <Navigation />
-        <div className="container-fluid text-center">
-          <div className="row justify-content-center">
-            <Switch>
-              <Route path="/login" component={LoginPage}/>
-              <Route path="/signup" component={SignUp} />
-              <Route path="/home" component={HomePage}/>
-              <Route path="/profile" component={ProfilePage}/>
-              <Route path="/messages" component={MessagePage}/>
-              <Route path="/matches" component={MatchesPage}/>
-              <Route path="/" component={LoginPage} />
-            </Switch>
+        <Router>
+
+          {this.state.loggedIn && <Navigation logout={this.logout}></Navigation>}
+
+          {/* <Navigation /> */}
+          <div className="container-fluid text-center">
+            <div className="row justify-content-center">
+              <Switch>
+                <Route path="/login" render={props=><LoginPage login={this.login} loggedIn={this.state.loggedIn}></LoginPage>} />
+                <Route path="/signup" render={props=><SignUp login={this.login} loggedIn={this.state.loggedIn}></SignUp>} />
+                <Route path="/home" component={HomePage} />
+                <Route path="/profile" component={ProfilePage} />
+                <Route path="/messages" component={MessagePage} />
+                <Route path="/matches" component={MatchesPage} />
+                <Route path="/" render={props=><LoginPage login={this.login} loggedIn={this.state.loggedIn}></LoginPage>} />
+              </Switch>
+            </div>
           </div>
-        </div>
-      </Router>
+        </Router>
 
       </AuthProvider>
     );
