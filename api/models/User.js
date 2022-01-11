@@ -16,7 +16,10 @@ module.exports = (sequelize, DataTypes) => {
         len: [5, 50],
         notEmpty: true,
       },
-      unique: true,
+      unique: {
+        args: true,
+        msg: 'Username already exists'
+      }
     },
     firstName: {
         type: DataTypes.STRING,
@@ -45,9 +48,12 @@ module.exports = (sequelize, DataTypes) => {
         validate: {
             len: [5, 50],
             notEmpty: true,
-            isEmail: true
+            isEmail: true,
         },
-        unique: true,
+        unique: {
+          args: true,
+          msg: 'Email is already in use'
+        }
     },
     // passwordHash: { type: DataTypes.STRING },
     password: {
