@@ -1,6 +1,6 @@
 .div-signup{
     width:50%;
-    height:90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -36,17 +36,18 @@ a{
 
 .input{
     width: 60%;
+    height: 40px;
     border: none;
     padding: 8px;
     padding-left: 25px;
-    margin: 12px 20px;
+    margin: 0 20px;
     background-color: #ececec;
     box-shadow: none;
 }
 
 .button{
     width: 29%;
-    margin: 5px 10px;
+    margin: 0px 10px;
     background-color: #dcd6f2;
     padding: 8px;
     font-weight: 600;
@@ -62,10 +63,6 @@ a{
     background-color: white;
     border: solid 1px #7e74a4;
     line-height: 5px;
-}
-.chooseButton:focus{
-    background-color:#dcd6f2 ;
-    color: white;
 }
 
 .signButton{
@@ -91,9 +88,63 @@ a{
 }
 
 .hobby-option{
-    text-align: left;
-    margin-left: 130px;
+    margin: 10px 0;
+    text-align: center;
     color:rgb(100, 72, 131)
 }
 
+.error{
+    width: 60%;
+    height: 20px;
+    /* border: 1px solid red; */
+    margin: 5px auto;
+    text-align: left;
+    color: red;
+    font-size: 10px;
+}
 
+#gender-dropdown {
+    width: 60%;
+    height: 40px;
+    border: none;
+    padding: 8px;
+    padding-left: 25px;
+    margin: 0 20px;
+    background-color: #ececec;
+    box-shadow: none;
+    /* color: #858585; */
+}
+
+#hobby {
+    text-align: center;
+}
+
+#sign-up-title {
+    color:rgb(100, 72, 131);
+    margin: 20px;
+    font-size: 20px;
+}
+
+#log-in {
+    color:rgb(100, 72, 131);
+    margin-top: 20px;
+}
+
+::placeholder {
+    color: #999999;
+}
+
+select,
+select option {
+  color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #999999;
+}
+
+/*Added for browser compatibility*/
+[hidden] {
+  display: none;
+}
