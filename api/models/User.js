@@ -39,7 +39,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        notEmpty:true
+        notEmpty:true,
+        min: 13,
+        max: 120
       }
     },
     email: {
